@@ -49,8 +49,11 @@ Response:
 Example cURL request:
 
 ```bash
-curl -X POST http://localhost:9111/v0/scrape \
-     -H "Authorization: Bearer $FEWSATS_SCRAPER_API_KEY" \
-     -H "Content-Type: application/json" \
-     -d '{"url": "https://paywithhub.com", "format": "markdown"}'
+curl --request POST \
+  --url http://159.203.130.7:9111/v0/scrape \
+  --header "Authorization: Bearer ${FEWSATS_SCRAPER_API_KEY}" \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "url": "https://paywithhub.com"
+}'
 ```
